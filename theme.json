@@ -1,0 +1,254 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+                {
+					"color": "#f9003c",
+					"name": "Brand Primary",
+					"slug": "brandPrimary"
+				},
+                {
+					"color": "#00F9BD",
+					"name": "Brand Secondary",
+					"slug": "brandSecondary"
+				},
+                {
+					"color": "#292f36",
+					"name": "Content Primary",
+					"slug": "contentPrimary"
+				},
+                {
+					"color": "#77878b",
+					"name": "Content Secondary",
+					"slug": "contentSecondary"
+				},
+                {
+					"color": "#ffe8e1",
+					"name": "Detail Primary",
+					"slug": "detailPrimary"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "White",
+					"slug": "white"
+				}
+			],
+            "useRootPaddingAwareAlignments": true
+		},
+		"layout": {
+			"contentSize": "645px",
+			"wideSize": "1340px"
+		},
+        "dimensions": {
+			"minHeight": true
+		},
+        "position": {
+			"sticky": true
+		},
+		"spacing": {
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "Tiny",
+					"size": "10px",
+					"slug": "20"
+				},
+				{
+					"name": "X-Small",
+					"size": "20px",
+					"slug": "30"
+				},
+				{
+					"name": "Small",
+					"size": "30px",
+					"slug": "40"
+				},
+				{
+					"name": "Regular",
+					"size": "clamp(30px, 5vw, 50px)",
+					"slug": "50"
+				},
+				{
+					"name": "Large",
+					"size": "clamp(30px, 7vw, 70px)",
+					"slug": "60"
+				},
+				{
+					"name": "X-Large",
+					"size": "clamp(50px, 7vw, 90px)",
+					"slug": "70"
+				},
+				{
+					"name": "XX-Large",
+					"size": "clamp(70px, 10vw, 140px)",
+					"slug": "80"
+				}
+			],
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"writingMode": true,
+			"defaultFontSizes": false,
+			"fluid": true,
+			"fontSizes": [
+				{
+					"fluid": false,
+					"name": "Small",
+					"size": "0.875rem",
+					"slug": "small"
+				},
+				{
+					"fluid": {
+						"max": "1.125rem",
+						"min": "1rem"
+					},
+					"name": "Medium",
+					"size": "1rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"max": "1.375rem",
+						"min": "1.125rem"
+					},
+					"name": "Large",
+					"size": "1.38rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"max": "2rem",
+						"min": "1.75rem"
+					},
+					"name": "Extra Large",
+					"size": "1.75rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"max": "3rem",
+						"min": "2.15rem"
+					},
+					"name": "Extra Extra Large",
+					"size": "2.15rem",
+					"slug": "xx-large"
+				}
+			],
+			"fontFamilies": [
+				{
+					"name": "Headings",
+					"slug": "headings",
+					"fontFamily": "Anton, sans-serif",
+					"fontFace": [
+						{
+							"src": [
+								"file:./assets/fonts/Anton/Anton-Regular.ttf"
+							],
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontFamily": "Anton"
+						}
+					]
+				},
+                {
+					"name": "Body",
+					"slug": "body",
+					"fontFamily": "RobotoCondensed, sans-serif",
+					"fontFace": [
+						{
+                            "fontFamily": "RobotoCondensed",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+                            "src": [
+								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Regular.ttf"
+							]
+						},
+                        {
+                            "fontFamily": "RobotoCondensed",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+                            "src": [
+								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Italic.ttf"
+							]
+						},
+                        {
+                            "fontFamily": "RobotoCondensed",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+                            "src": [
+								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Medium.ttf"
+							]
+						},
+                        {
+                            "fontFamily": "RobotoCondensed",
+							"fontWeight": "500",
+							"fontStyle": "italic",
+                            "src": [
+								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-MediumItalic.ttf"
+							]
+						},
+                        {
+                            "fontFamily": "RobotoCondensed",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+                            "src": [
+								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Bold.ttf"
+							]
+						},
+                        {
+                            "fontFamily": "RobotoCondensed",
+							"fontWeight": "700",
+							"fontStyle": "italic",
+                            "src": [
+								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-BoldItalic.ttf"
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|white",
+			"text": "var:preset|color|contentPrimary"
+		},
+        "spacing": {
+			"padding": {
+				"top": "0",
+				"bottom": "0",
+				"left": "2rem",
+				"right": "2rem"
+			}
+		},
+        "blocks": {},
+        "elements": {}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
+		}
+	],
+	"customTemplates": [
+	]
+}
