@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-redcow-redcow-footer {
+	position: relative;
+	width: 100%;
+	background-color: var(--wp--preset--color--brand-primary);
+
+	.footer-container {
+		position: relative;
+		padding: 40px 40px 40px 40px;
+	}
+
+}

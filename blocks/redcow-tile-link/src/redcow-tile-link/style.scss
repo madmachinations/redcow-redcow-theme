@@ -1,0 +1,60 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-redcow-redcow-tile-link {
+	background-color: transparent;
+	border: 1px #f0f0f0 solid;
+	transition: background-color 0.4s ease-in-out;
+	cursor: pointer;
+	flex-grow: 1;
+	align-self: stretch !important;
+	height: 100%;
+	display: flex;
+	
+	a {
+		color: var(--wp--preset--color--content-primary);
+		padding: 40px 40px 30px 40px;
+		transition: color 0.4s ease-in-out;
+		align-self: stretch;
+		flex-grow: 1;
+		text-decoration: none !important;
+		font-weight: normal;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		.tile-content {
+			align-self: stretch;
+			flex-grow: 1;
+		}
+
+		.arrow {
+			fill: var(--wp--preset--color--content-primary);
+			transition: fill 0.4s ease-in-out;
+			flex-grow: 0;
+
+			svg {
+				width: 60px;
+			}
+		}
+	}
+
+
+	&:hover {
+		background-color: var(--wp--preset--color--brand-primary);
+
+		a {
+			text-decoration: none !important;
+			font-weight: normal;
+			color: #ffffff;
+
+			.arrow {
+				fill: #ffffff;
+			}
+		}
+	}
+}

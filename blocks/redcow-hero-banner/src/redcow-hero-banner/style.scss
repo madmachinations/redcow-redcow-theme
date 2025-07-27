@@ -1,0 +1,83 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-redcow-redcow-hero-banner {
+	width: 100%;
+}
+
+.redcow-hero-banner {
+	position: relative;
+	// aspect-ratio: 380 / 147;
+	aspect-ratio: 380 / 200;
+	width: 100%;
+	
+	.hero-media {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: bottom;
+		background-color: var(--wp--preset--color--brand-primary);
+
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+
+		video {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.hero-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 70px;
+		z-index: 2;
+		margin-top: 100px;
+		margin-bottom: 60px;
+		z-index: 2;
+		
+		.container {
+			position: relative;
+			max-width: var(--wp--style--global--wide-size);
+			margin-left: auto;
+			margin-right: auto;
+			height: 100%;
+
+			.container-column {
+				position: relative;
+				width: 50%;
+				height: 100%;
+				display: flex;
+				align-items: "center";
+			}
+
+		}
+
+	}
+
+
+	.hero-cutoff {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100px;
+		display: flex;
+		justify-content: flex-end;
+		z-index: 3;
+	}
+
+}

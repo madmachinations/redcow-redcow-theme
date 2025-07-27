@@ -1,0 +1,1 @@
+(()=>{function e(){const e=document.querySelector(".wp-block-redcow-redcow-nav-bar");e&&(0===window.scrollY?(e.classList.remove("visible"),e.classList.add("transparent")):(e.classList.remove("transparent"),e.classList.add("visible")))}window.addEventListener("DOMContentLoaded",e),window.addEventListener("scroll",e)})();

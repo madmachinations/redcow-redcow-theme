@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementsByClassName("logo-track");Array.from(t).forEach(t=>{const e=Array.from(t.children),n=(t.scrollWidth,2.5*e.length);t.style.animationDuration=`${n}s`})});

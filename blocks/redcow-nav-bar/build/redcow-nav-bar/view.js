@@ -1,0 +1,1 @@
+(()=>{function e(){const e=document.querySelector(".get-in-touch-bar");if(!e)return;const n=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight-100;0===n||n>=t?e.classList.remove("visible"):e.classList.add("visible")}window.addEventListener("DOMContentLoaded",e),window.addEventListener("scroll",e)})();

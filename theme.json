@@ -9,27 +9,32 @@
 			"defaultPalette": false,
 			"palette": [
                 {
-					"color": "#f9003c",
+					"color": "#b50600",
 					"name": "Brand Primary",
 					"slug": "brandPrimary"
 				},
                 {
-					"color": "#00F9BD",
+					"color": "#7D0700",
 					"name": "Brand Secondary",
 					"slug": "brandSecondary"
 				},
                 {
-					"color": "#292f36",
+					"color": "#000000",
 					"name": "Content Primary",
 					"slug": "contentPrimary"
 				},
                 {
-					"color": "#77878b",
+					"color": "#444342",
 					"name": "Content Secondary",
 					"slug": "contentSecondary"
 				},
                 {
-					"color": "#ffe8e1",
+					"color": "#292f36",
+					"name": "Content Tertiary",
+					"slug": "contentTertiary"
+				},
+                {
+					"color": "#dddddd",
 					"name": "Detail Primary",
 					"slug": "detailPrimary"
 				},
@@ -37,10 +42,15 @@
 					"color": "#FFFFFF",
 					"name": "White",
 					"slug": "white"
+				},
+				{
+					"color": "#f9285a",
+					"name": "Brand Primary Light 1",
+					"slug": "brandPrimaryLight1"
 				}
-			],
-            "useRootPaddingAwareAlignments": true
+			]
 		},
+        "useRootPaddingAwareAlignments": true,
 		"layout": {
 			"contentSize": "645px",
 			"wideSize": "1340px"
@@ -151,69 +161,68 @@
 				{
 					"name": "Headings",
 					"slug": "headings",
-					"fontFamily": "Anton, sans-serif",
+					"fontFamily": "PoppinsBold, sans-serif",
 					"fontFace": [
 						{
 							"src": [
-								"file:./assets/fonts/Anton/Anton-Regular.ttf"
+								"file:./assets/fonts/Poppins/Poppins-Bold.ttf"
+							],
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontFamily": "PoppinsBold"
+						}
+					]
+				},
+				{
+					"name": "DecorativeHeadings",
+					"slug": "decorative",
+					"fontFamily": "DecorativeHeadings, sans-serif",
+					"fontFace": [
+						{
+							"src": [
+								"file:./assets/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf"
 							],
 							"fontWeight": "400",
 							"fontStyle": "normal",
-							"fontFamily": "Anton"
+							"fontFamily": "DecorativeHeadings"
 						}
 					]
 				},
                 {
 					"name": "Body",
 					"slug": "body",
-					"fontFamily": "RobotoCondensed, sans-serif",
+					"fontFamily": "Poppins, sans-serif",
 					"fontFace": [
 						{
-                            "fontFamily": "RobotoCondensed",
+                            "fontFamily": "Poppins",
 							"fontWeight": "400",
 							"fontStyle": "normal",
                             "src": [
-								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Regular.ttf"
+								"file:./assets/fonts/Poppins/Poppins-Regular.ttf"
 							]
 						},
                         {
-                            "fontFamily": "RobotoCondensed",
+                            "fontFamily": "Poppins",
 							"fontWeight": "400",
 							"fontStyle": "italic",
                             "src": [
-								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Italic.ttf"
+								"file:./assets/fonts/Poppins/Poppins-Italic.ttf"
 							]
 						},
                         {
-                            "fontFamily": "RobotoCondensed",
-							"fontWeight": "500",
-							"fontStyle": "normal",
-                            "src": [
-								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Medium.ttf"
-							]
-						},
-                        {
-                            "fontFamily": "RobotoCondensed",
-							"fontWeight": "500",
-							"fontStyle": "italic",
-                            "src": [
-								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-MediumItalic.ttf"
-							]
-						},
-                        {
-                            "fontFamily": "RobotoCondensed",
+                            "fontFamily": "Poppins",
 							"fontWeight": "700",
 							"fontStyle": "normal",
                             "src": [
-								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-Bold.ttf"
+								"file:./assets/fonts/Poppins/Poppins-Bold.ttf"
 							]
 						},
                         {
-                            "fontFamily": "RobotoCondensed",
+                            "fontFamily": "Poppins",
 							"fontWeight": "700",
 							"fontStyle": "italic",
                             "src": [
-								"file:./assets/fonts/Roboto_Condensed/static/RobotoCondensed-BoldItalic.ttf"
+								"file:./assets/fonts/Poppins/Poppins-BoldItalic.ttf"
 							]
 						}
 					]
@@ -234,7 +243,42 @@
 				"right": "2rem"
 			}
 		},
-        "blocks": {},
+        "blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"lineHeight": "1.0",
+					"textTransform": "uppercase"
+				},
+				"elements": {
+					"h1": {
+						"typography": {
+							"fontSize": "var:preset|font-size|xx-large"
+						}
+					},
+					"h2": {
+						"typography": {
+							"fontSize": "var:preset|font-size|x-large"
+						}
+					},
+					"h3": {
+						"typography": {
+							"fontSize": "var:preset|font-size|large"
+						}
+					},
+					"h4": {
+						"typography": {
+							"fontSize": "var:preset|font-size|medium"
+						}
+					},
+					"h5": {
+						"typography": {
+							"fontSize": "var:preset|font-size|medium"
+						}
+					}
+				}
+			}
+		},
         "elements": {}
 	},
 	"templateParts": [
