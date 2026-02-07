@@ -6,7 +6,7 @@
 //  <div class="hero-media" style="background-image: url(' echo get_template_directory_uri();/assets/images/room_bg.jpg');">
 ?>
 <div <?php echo get_block_wrapper_attributes(); ?>>
-	
+
 	<div class="redcow-hero-banner">
 
 		<div class="hero-media" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/room_bg.jpg');">
@@ -22,9 +22,17 @@
 		</div>
 
 		<div class="hero-cutoff">
+<!--			<svg width="100%" height="100" viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--				<polygon points="0,100 1000,100 1000,0 500,100 0,0" fill="white" />-->
+<!--			</svg>-->
 			<svg width="100%" height="100" viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-				<polygon points="0,100 1000,100 1000,0 500,100 0,0" fill="white" />
+				<mask id="mainmask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="100">
+					<rect width="1000" height="100" fill="white"/>
+					<ellipse cx="500" cy="-600" rx="1000" ry="700" fill="black"/>
+				</mask>
+				<rect width="1000" height="100" fill="white" mask="url(#mainmask)"/>
 			</svg>
+
 		</div>
 
 	</div>

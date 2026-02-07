@@ -39,6 +39,8 @@ $customBlocks = [
     "redcow-angled-separator",
     "redcow-footer",
     "redcow-tile-link",
+    "redcow-case-study-letterbox",
+    "redcow-geometric-section",
 ];
 
 foreach($customBlocks as $block){

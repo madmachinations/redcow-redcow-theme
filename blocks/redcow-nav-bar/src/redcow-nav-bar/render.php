@@ -4,7 +4,7 @@
  */
 ?>
 <div <?php echo get_block_wrapper_attributes(); ?>>
-	
+
 	<div class="dynamic-logo">
 		<div class="full-logo">
 			<?php include(get_template_directory() . '/assets/images/logo-white.svg'); ?>
@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="nav-bar-right">
-			
+
 			<div class="get-in-touch-button">Get in touch</div>
 
 		</div>

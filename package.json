@@ -1,0 +1,10 @@
+{
+  "name": "redcow-theme",
+  "private": true,
+  "workspaces": [
+    "blocks/*"
+  ],
+  "scripts": {
+    "new-block": "./bin/new_block.sh"
+  }
+}

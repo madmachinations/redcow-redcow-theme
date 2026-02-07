@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "redcow/redcow-geometric-section",
+	"version": "0.1.0",
+	"title": "Redcow Geometric Section",
+	"category": "theme",
+	"icon": "block-default",
+	"description": "Geometric content section",
+	"example": {},
+	"supports": {
+		"html": false,
+		"color": {
+			"background": false,
+			"text": false
+		}
+	},
+	"attributes": {
+		"outerColor": {
+			"type": "string",
+			"default": "white"
+		},
+		"innerColor": {
+			"type": "string",
+			"default": ""
+		},
+		"shape": {
+			"type": "string",
+			"default": "semi-circle-top-left"
+		},
+		"topSpacing": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "redcow-geometric-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

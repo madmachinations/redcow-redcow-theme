@@ -1,0 +1,37 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.redcow-geometric-section {
+
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	.redcow-geometric-section-shape-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: auto;
+	}
+
+	.redcow-geometric-section-content {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: stretch;
+		min-height: 100%;
+	}
+
+	.redcow-geometric-section-content > * {
+		flex-grow: 1;
+		width: 100%;
+	}
+
+}
