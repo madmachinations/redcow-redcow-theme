@@ -9,9 +9,14 @@
 
 	<div class="redcow-hero-banner">
 
-		<div class="hero-media" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/room_bg.jpg');">
-<!--			<video src="--><?php //echo get_template_directory_uri(); ?><!--/assets/videos/home_header.mp4" autoplay loop muted playsinline></video>-->
-			<image src="<?php echo get_template_directory_uri(); ?>/assets/images/hero_background.jpg" />
+		<?php
+		//<div class="hero-media" style="background-image: url('echo get_template_directory_uri();/assets/images/hero_background.jpg');">
+		?>
+		<div class="hero-media">
+			<?php
+			//<video src="echo get_template_directory_uri();/assets/videos/home_header.mp4" autoplay loop muted playsinline></video>
+			?>
+			<image src="<?php echo get_template_directory_uri(); ?>/assets/images/hero_background.jpg"></image>
 		</div>
 
 		<div class="hero-content">

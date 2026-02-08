@@ -5,23 +5,22 @@
  */
 
 .wp-block-redcow-redcow-logo-scroller {
-	
+
 	.logo-scroller.editor {
 		overflow: scroll;
 		width: 100%;
-		border: 1px solid red;
 
-		.logo-track {
+		.logo-track .block-editor-inner-blocks .block-editor-block-list__layout {
 			display: flex;
-			flex-direction: row;
-			gap: 100px;
-			border: 1px solid green;
+			flex-direction: row !important;
+			gap: 150px;
 
 			img {
-				height: 60px;
-				width: auto;
+				height: 40px !important;
+				width: auto !important;
+				max-width: none !important;
 				flex-shrink: 0;
-				border: 1px solid yellow;
+				aspect-ratio: unset !important;
 			}
 
 		}

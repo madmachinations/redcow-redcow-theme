@@ -6,3 +6,8 @@
 .letterbox-container, .letterbox-container * {
     aspect-ratio: 30 / 13 !important;
 }
+
+
+.column-reverse-wrap {
+    flex-wrap: wrap-reverse !important;
+}

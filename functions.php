@@ -37,9 +37,7 @@ $customBlocks = [
     "redcow-nav-bar",
     "redcow-logo-scroller",
     "redcow-angled-separator",
-    "redcow-footer",
     "redcow-tile-link",
-    "redcow-case-study-letterbox",
     "redcow-geometric-section",
     "redcow-nested-title",
 ];
