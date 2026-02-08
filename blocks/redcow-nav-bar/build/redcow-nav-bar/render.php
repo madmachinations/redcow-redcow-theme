@@ -9,9 +9,9 @@
 <div <?php echo get_block_wrapper_attributes(); ?>>
 
 	<div class="dynamic-logo">
-		<div class="full-logo">
+		<a class="full-logo" href="/">
 			<?php include(get_template_directory() . '/assets/images/logo-white.svg'); ?>
-		</div>
+		</a>
 	</div>
 
 	<div class="nav-bar-content">
