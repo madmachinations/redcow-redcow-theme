@@ -41,6 +41,7 @@ $customBlocks = [
     "redcow-tile-link",
     "redcow-case-study-letterbox",
     "redcow-geometric-section",
+    "redcow-nested-title",
 ];
 
 foreach($customBlocks as $block){

@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-redcow-redcow-nested-title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	.nested-title-line {
+		margin: 0;
+		line-height: 1;
+	}
+
+	.nested-title-line + .nested-title-line {
+		margin-top: -0.25em;
+	}
+
+	.nested-title-upper,
+	.nested-title-lower {
+		font-family: var(--wp--preset--font-family--decorative) !important;
+	}
+
+	.nested-title-middle {
+		font-family: var(--wp--preset--font-family--headings) !important;
+	}
+
+}

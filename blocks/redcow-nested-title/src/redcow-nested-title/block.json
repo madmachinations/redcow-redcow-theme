@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "redcow/redcow-nested-title",
+	"version": "0.1.0",
+	"title": "Redcow Nested Title",
+	"category": "theme",
+	"icon": "block-default",
+	"description": "Nested Title",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"upperText": {
+			"type": "string",
+			"default": ""
+		},
+		"middleText": {
+			"type": "string",
+			"default": "Title"
+		},
+		"lowerText": {
+			"type": "string",
+			"default": ""
+		},
+		"upperTag": {
+			"type": "string",
+			"default": "h3"
+		},
+		"middleTag": {
+			"type": "string",
+			"default": "h2"
+		},
+		"lowerTag": {
+			"type": "string",
+			"default": "h3"
+		}
+	},
+	"textdomain": "redcow-nested-title",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
