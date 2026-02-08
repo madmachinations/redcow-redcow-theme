@@ -17,9 +17,29 @@ return array(
 			'html' => false
 		),
 		'attributes' => array(
-			'direction' => array(
+			'upperText' => array(
 				'type' => 'string',
-				'default' => 'right-to-left'
+				'default' => ''
+			),
+			'middleText' => array(
+				'type' => 'string',
+				'default' => 'Title'
+			),
+			'lowerText' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'upperTag' => array(
+				'type' => 'string',
+				'default' => 'h3'
+			),
+			'middleTag' => array(
+				'type' => 'string',
+				'default' => 'h2'
+			),
+			'lowerTag' => array(
+				'type' => 'string',
+				'default' => 'h3'
 			)
 		),
 		'textdomain' => 'redcow-nested-title',
