@@ -28,9 +28,10 @@ export default function Edit({ attributes, setAttributes }) {
 		upperText,
 		middleText,
 		lowerText,
-		upperTag,
-		middleTag,
-		lowerTag,
+		upperAlign,
+		middleAlign,
+		lowerAlign,
+		tag,
 	} = attributes;
 
 	const tagOptions = [
@@ -42,59 +43,79 @@ export default function Edit({ attributes, setAttributes }) {
 		{ label: 'P', value: 'p' },
 	];
 
-	const UpperTag = upperTag || 'h3';
-	const MiddleTag = middleTag || 'h2';
-	const LowerTag = lowerTag || 'h3';
+	const alignOptions = [
+		{ label: 'Left', value: 'left' },
+		{ label: 'Center', value: 'center' },
+		{ label: 'Right', value: 'right' },
+	];
+
+	const TagName = tag || 'h2';
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __('Nested Title Settings', 'redcow-nested-title') } initialOpen={ true }>
+				<PanelBody title={ __('Title Settings', 'redcow-nested-title') } initialOpen={ true }>
+					<SelectControl
+						label={ __('Title tag', 'redcow-nested-title') }
+						value={ tag }
+						options={ tagOptions }
+						onChange={ (value) => setAttributes({ tag: value }) }
+					/>
+					<SelectControl
+						label={ __('Upper alignment', 'redcow-nested-title') }
+						value={ upperAlign }
+						options={ alignOptions }
+						onChange={ (value) => setAttributes({ upperAlign: value }) }
+					/>
+					<SelectControl
+						label={ __('Middle alignment', 'redcow-nested-title') }
+						value={ middleAlign }
+						options={ alignOptions }
+						onChange={ (value) => setAttributes({ middleAlign: value }) }
+					/>
+					<SelectControl
+						label={ __('Lower alignment', 'redcow-nested-title') }
+						value={ lowerAlign }
+						options={ alignOptions }
+						onChange={ (value) => setAttributes({ lowerAlign: value }) }
+					/>
+				</PanelBody>
+				<PanelBody title={ __('Content', 'redcow-nested-title') } initialOpen={ false }>
 					<TextControl
 						label={ __('Upper text', 'redcow-nested-title') }
 						value={ upperText }
 						onChange={ (value) => setAttributes({ upperText: value }) }
-					/>
-					<SelectControl
-						label={ __('Upper tag', 'redcow-nested-title') }
-						value={ upperTag }
-						options={ tagOptions }
-						onChange={ (value) => setAttributes({ upperTag: value }) }
 					/>
 					<TextControl
 						label={ __('Middle text', 'redcow-nested-title') }
 						value={ middleText }
 						onChange={ (value) => setAttributes({ middleText: value }) }
 					/>
-					<SelectControl
-						label={ __('Middle tag', 'redcow-nested-title') }
-						value={ middleTag }
-						options={ tagOptions }
-						onChange={ (value) => setAttributes({ middleTag: value }) }
-					/>
 					<TextControl
 						label={ __('Lower text', 'redcow-nested-title') }
 						value={ lowerText }
 						onChange={ (value) => setAttributes({ lowerText: value }) }
 					/>
-					<SelectControl
-						label={ __('Lower tag', 'redcow-nested-title') }
-						value={ lowerTag }
-						options={ tagOptions }
-						onChange={ (value) => setAttributes({ lowerTag: value }) }
-					/>
 				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps() }>
-				{ upperText ? (
-					<UpperTag className="nested-title-line nested-title-upper">{ upperText }</UpperTag>
-				) : null }
-				<MiddleTag className="nested-title-line nested-title-middle">
-					{ middleText || __('Title', 'redcow-nested-title') }
-				</MiddleTag>
-				{ lowerText ? (
-					<LowerTag className="nested-title-line nested-title-lower">{ lowerText }</LowerTag>
-				) : null }
+				<div className={"nested-title-container"}>
+					<TagName className="nested-title">
+						{ upperText ? (
+							<span className={ `nested-title-line nested-title-upper nested-title-align-${upperAlign || 'left'}` }>
+							{ upperText }
+						</span>
+						) : null }
+						<span className={ `nested-title-line nested-title-middle nested-title-align-${middleAlign || 'left'}` }>
+						{ middleText || __('Title', 'redcow-nested-title') }
+					</span>
+						{ lowerText ? (
+							<span className={ `nested-title-line nested-title-lower nested-title-align-${lowerAlign || 'left'}` }>
+							{ lowerText }
+						</span>
+						) : null }
+					</TagName>
+				</div>
 			</div>
 		</>
 	);

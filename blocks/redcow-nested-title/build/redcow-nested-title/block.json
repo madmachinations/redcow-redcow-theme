@@ -24,17 +24,21 @@
       "type": "string",
       "default": ""
     },
-    "upperTag": {
+    "upperAlign": {
       "type": "string",
-      "default": "h3"
+      "default": "left"
     },
-    "middleTag": {
+    "middleAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "lowerAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "tag": {
       "type": "string",
       "default": "h2"
-    },
-    "lowerTag": {
-      "type": "string",
-      "default": "h3"
     }
   },
   "textdomain": "redcow-nested-title",

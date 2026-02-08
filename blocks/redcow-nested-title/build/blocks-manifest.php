@@ -29,17 +29,21 @@ return array(
 				'type' => 'string',
 				'default' => ''
 			),
-			'upperTag' => array(
+			'upperAlign' => array(
 				'type' => 'string',
-				'default' => 'h3'
+				'default' => 'left'
 			),
-			'middleTag' => array(
+			'middleAlign' => array(
+				'type' => 'string',
+				'default' => 'left'
+			),
+			'lowerAlign' => array(
+				'type' => 'string',
+				'default' => 'left'
+			),
+			'tag' => array(
 				'type' => 'string',
 				'default' => 'h2'
-			),
-			'lowerTag' => array(
-				'type' => 'string',
-				'default' => 'h3'
 			)
 		),
 		'textdomain' => 'redcow-nested-title',
