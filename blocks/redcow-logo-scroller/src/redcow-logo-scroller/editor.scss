@@ -7,8 +7,8 @@
 .wp-block-redcow-redcow-logo-scroller {
 
 	.logo-scroller.editor {
-		overflow: scroll;
-		width: 100%;
+		overflow: scroll !important;
+		width: 100vw;
 
 		.logo-track .block-editor-inner-blocks .block-editor-block-list__layout {
 			display: flex;
