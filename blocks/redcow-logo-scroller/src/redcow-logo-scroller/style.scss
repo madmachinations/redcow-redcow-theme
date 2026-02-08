@@ -27,10 +27,10 @@
 			bottom: 0;
 			display: flex;
 			flex-direction: row;
-			gap: 150px;
 			max-width: none !important;
 			width: auto !important;
 			overflow: visible;
+			gap: 150px;
 
 			figure {
 				margin: 0 !important;
@@ -46,13 +46,20 @@
 
 		}
 
+		.logo-set {
+			display: flex;
+			flex-direction: row;
+			gap: 150px;
+			max-width: none;
+		}
+
 		@keyframes scroll-left {
 			0% { transform: translateX(0); }
-			100% { transform: translateX(-50%); }
+			100% { transform: translateX(var(--scroll-distance, -50%)); }
 		}
 
 		@keyframes scroll-right {
-			0% { transform: translateX(-50%); }
+			0% { transform: translateX(var(--scroll-distance, -50%)); }
 			100% { transform: translateX(0%); }
 		}
 

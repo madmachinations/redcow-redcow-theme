@@ -22,18 +22,60 @@
 
 /* eslint-disable no-console */
 
+function updateLogoTrack(track) {
+	const firstSet = track.querySelector(".logo-set");
+	const gap = 150;
+	const totalWidth = firstSet ? firstSet.scrollWidth + gap : track.scrollWidth / 2;
+	const pixelsPerSecond = 120;
+	const duration = totalWidth / pixelsPerSecond;
+
+	track.style.setProperty("--scroll-distance", `-${totalWidth}px`);
+	track.style.animationDuration = `${duration}s`;
+}
+
+function waitForTrackImages(track) {
+	const images = Array.from(track.querySelectorAll("img"));
+	if (!images.length) {
+		updateLogoTrack(track);
+		return;
+	}
+
+	images.forEach((img) => {
+		img.loading = "eager";
+		img.decoding = "sync";
+	});
+
+	const pending = images.filter((img) => !img.complete);
+	if (!pending.length) {
+		updateLogoTrack(track);
+		return;
+	}
+
+	let remaining = pending.length;
+	const done = () => {
+		remaining -= 1;
+		if (remaining <= 0) {
+			updateLogoTrack(track);
+		}
+	};
+
+	pending.forEach((img) => {
+		img.addEventListener("load", done, { once: true });
+		img.addEventListener("error", done, { once: true });
+	});
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  const tracks = document.getElementsByClassName("logo-track");
-  
-  Array.from(tracks).forEach((track) => {
-    const logos = Array.from(track.children);
+	const tracks = document.getElementsByClassName("logo-track");
 
-    const totalWidth = track.scrollWidth / 2;
-    const duration = logos.length * 2.5;
+	Array.from(tracks).forEach((track) => {
+		waitForTrackImages(track);
+	});
+});
 
-    track.style.animationDuration = `${duration}s`;
-  })
-  
+window.addEventListener("resize", () => {
+	const tracks = document.getElementsByClassName("logo-track");
+	Array.from(tracks).forEach((track) => updateLogoTrack(track));
 });
 
 /* eslint-enable no-console */
