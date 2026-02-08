@@ -29,7 +29,8 @@ function handleGetInTouchBarScrollEffect() {
   const scrollTop = window.scrollY;
   const scrollBottomThreshold = document.documentElement.scrollHeight - window.innerHeight - 100;
 
-  if (scrollTop === 0 || scrollTop >= scrollBottomThreshold) {
+  // if (scrollTop === 0 || scrollTop >= scrollBottomThreshold) {
+  if (scrollTop === 0) {
     navBar.classList.remove('visible');
   } else {
     navBar.classList.add('visible');
@@ -38,5 +39,62 @@ function handleGetInTouchBarScrollEffect() {
 
 window.addEventListener('DOMContentLoaded', handleGetInTouchBarScrollEffect);
 window.addEventListener('scroll', handleGetInTouchBarScrollEffect);
+
+function setupNavBurgerMenus() {
+  const navBlocks = document.querySelectorAll('.wp-block-redcow-redcow-nav-bar');
+  if (!navBlocks.length) return;
+
+  navBlocks.forEach((block) => {
+    const burger = block.querySelector('.nav-burger');
+    const menu = block.querySelector('.nav-bar-menu');
+    if (!burger || !menu) return;
+
+    const closeMenu = () => {
+      block.classList.remove('is-menu-open');
+      block.classList.remove('force-visible');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Open menu');
+    };
+
+    const openMenu = () => {
+      block.classList.add('is-menu-open');
+      block.classList.add('force-visible');
+      burger.setAttribute('aria-expanded', 'true');
+      burger.setAttribute('aria-label', 'Close menu');
+    };
+
+    const toggleMenu = () => {
+      if (block.classList.contains('is-menu-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
+
+    burger.addEventListener('click', toggleMenu);
+
+    menu.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        closeMenu();
+      }
+    });
+
+    const updateNavHeight = () => {
+      block.style.setProperty('--nav-bar-height', `${block.offsetHeight}px`);
+    };
+
+    const handleResize = () => {
+      updateNavHeight();
+      if (!window.matchMedia('(max-width: 1199px)').matches) {
+        closeMenu();
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', setupNavBurgerMenus);
 
 /* eslint-enable no-console */

@@ -45,7 +45,18 @@ export default function Edit() {
 					</div>
 
 					<div className="nav-bar-right">
-						<div className="get-in-touch-button">Get in touch</div>
+						<div className="get-in-touch-button" role="button" aria-label="Get in touch">
+							<span className="get-in-touch-text">Get in touch</span>
+							<span className="get-in-touch-icon" aria-hidden="true">
+								<PhoneIcon />
+							</span>
+						</div>
+
+						<button className="nav-burger" type="button" aria-label="Open menu" aria-expanded="false">
+							<span className="nav-burger-bar"></span>
+							<span className="nav-burger-bar"></span>
+							<span className="nav-burger-bar"></span>
+						</button>
 					</div>
 				</div>
 
@@ -78,6 +89,14 @@ function FullLogoSvg() {
 					/>
 				</g>
 			</g>
+		</svg>
+	)
+}
+
+function PhoneIcon() {
+	return (
+		<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6.6 10.8c1.3 2.4 3.2 4.3 5.6 5.6l1.9-1.9c.2-.2.6-.3.9-.2 1 .3 2.1.5 3.2.5.5 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.1.2 2.2.5 3.2.1.3 0 .7-.2.9l-1.9 1.9z"/>
 		</svg>
 	)
 }
